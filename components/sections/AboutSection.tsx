@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { profile } from "../../data/profile";
-import { Download } from "lucide-react";
+import { Download, Eye } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -49,7 +49,17 @@ export default function AboutSection() {
                 </div>
               </div> */}
 
-              <div className="mt-8">
+              <div className="mt-8 flex justify-center md:justify-start gap-4">
+                <a
+                  href="/cv/nadir-ammisaid-cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg transition-colors font-medium shadow-lg"
+                >
+                  <Eye size={20} />
+                  View CV
+                </a>
+
                 <a
                   href="/cv/nadir-ammisaid-cv.pdf"
                   download

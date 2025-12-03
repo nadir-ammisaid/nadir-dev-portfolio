@@ -1,6 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Download, MapPin, Mail, Phone, Languages, Award } from "lucide-react";
+import {
+  Download,
+  MapPin,
+  Mail,
+  Phone,
+  Languages,
+  Award,
+  Eye,
+} from "lucide-react";
 import { profile } from "../../data/profile";
 
 export default function AboutPage() {
@@ -152,13 +160,26 @@ export default function AboutPage() {
                   ))}
                 </div>
 
-                <a
-                  href="/cv/nadir-ammisaid-cv.pdf"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-lg transition-colors font-medium shadow-lg"
-                >
-                  <Download size={20} />
-                  Download Resume
-                </a>
+                <div className="flex justify-center md:justify-start gap-4">
+                  <a
+                    href="/cv/nadir-ammisaid-cv.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg transition-colors font-medium shadow-lg"
+                  >
+                    <Eye size={20} />
+                    View CV
+                  </a>
+
+                  <a
+                    href="/cv/nadir-ammisaid-cv.pdf"
+                    download
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-lg transition-colors font-medium shadow-lg"
+                  >
+                    <Download size={20} />
+                    Download CV
+                  </a>
+                </div>
               </div>
             </div>
           </div>
