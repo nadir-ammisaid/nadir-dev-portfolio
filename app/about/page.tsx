@@ -153,9 +153,7 @@ export default function AboutPage() {
                 </div>
 
                 <a
-                  href="/cv-nadir-ammisaid.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/cv/nadir-ammisaid-cv.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-lg transition-colors font-medium shadow-lg"
                 >
                   <Download size={20} />

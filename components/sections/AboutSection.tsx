@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { profile } from "../../data/profile";
+import { Download } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -52,8 +53,9 @@ export default function AboutSection() {
                 <a
                   href="/cv/nadir-ammisaid-cv.pdf"
                   download
-                  className="inline-block px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium shadow-md"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-lg transition-colors font-medium shadow-lg"
                 >
+                  <Download size={20} />
                   Download CV
                 </a>
               </div>
