@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ThemeToggle from "../ui/ThemeToggle";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -21,6 +21,13 @@ export function Header() {
 
   const { resolvedTheme } = useTheme();
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+  }, []);
+
   return (
     <header className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border-b dark:border-slate-700 z-50 transition-colors">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,13 +44,13 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src={
-                resolvedTheme === "dark"
+                mounted && resolvedTheme === "dark"
                   ? "/nadir-logo-dark2.png"
                   : "/nadir-logo.png"
               }
               alt="Nadir-Dev Logo"
-              width={200}
-              height={200}
+              width={80}
+              height={80}
               className="w-20 h-20"
             />
           </Link>

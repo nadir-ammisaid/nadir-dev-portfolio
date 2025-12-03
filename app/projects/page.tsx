@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { Github, ExternalLink, Search, Folder } from "lucide-react";
 import { projects } from "../../data/projects";
-import ProjectImage from "@/components/ui/ProjectImage";
+import ProjectImage from "../../components/ui/ProjectImage";
 
 type CategoryFilter = "all" | "frontend" | "backend" | "fullstack";
 
