@@ -4,7 +4,7 @@
 
 Professional portfolio showcasing my full-stack development skills and projects. Built with **Next.js 14** using the **App Router** and **TypeScript**, optimized for performance, SEO, and accessibility.
 
-**Live Demo:** [https://portfolio-nad.vercel.app](https://portfolio-nad.vercel.app)
+**Live Demo:** **[https://portfolio-nad.vercel.app](https://portfolio-nad.vercel.app)**
 
 <!-- ## Preview
 
@@ -192,7 +192,9 @@ Contact form with validation, social media links, and location information.
 
 Personal project developed by [**Nadir AMMI SAID**](https://www.linkedin.com/in/nadir-ammisaid/) to showcase my full-stack development skills and provide a platform for professional opportunities.
 
-**Contact:** [LinkedIn](https://www.linkedin.com/in/nadir-ammisaid/)
+🔗 Discover the project online: **[https://portfolio-nad.vercel.app](https://portfolio-nad.vercel.app)**
+
+**Contact me on LinkedIn:** **[https://linkedin.com/in/nadir-ammisaid/](https://www.linkedin.com/in/nadir-ammisaid/)**
 
 <!--
 ## Contribution

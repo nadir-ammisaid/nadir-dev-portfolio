@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import ThemeProvider from "../components/providers/ThemeProvider";
+import MemoryGameProvider from "../components/providers/MemoryGameProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,9 +25,11 @@ export default function RootLayout({
         className={`${inter.className} bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-50`}
       >
         <ThemeProvider>
-          <Header />
-          <main className="pt-16 min-h-screen">{children}</main>
-          <Footer />
+          <MemoryGameProvider>
+            <Header />
+            <main className="pt-16 min-h-screen">{children}</main>
+            <Footer />
+          </MemoryGameProvider>
         </ThemeProvider>
       </body>
     </html>

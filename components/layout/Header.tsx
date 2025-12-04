@@ -45,8 +45,8 @@ export function Header() {
             <Image
               src={
                 mounted && resolvedTheme === "dark"
-                  ? "/nadir-logo-dark2.png"
-                  : "/nadir-logo.png"
+                  ? "/nadir-logo-dark.png"
+                  : "/nadir-logo-light.png"
               }
               alt="Nadir-Dev Logo"
               width={80}
