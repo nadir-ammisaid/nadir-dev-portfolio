@@ -1,37 +1,16 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { Gamepad2 } from "lucide-react";
 import { profile } from "../../data/profile";
 import Image from "next/image";
-import { useKonamiCode } from "../../hooks/useKonamiCode";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { setSuccess } = useKonamiCode();
-  const [tapCount, setTapCount] = useState(0);
-
-  const handleSecretTap = () => {
-    const newCount = tapCount + 1;
-    setTapCount(newCount);
-    if (newCount >= 5) {
-      if (navigator.vibrate) navigator.vibrate(180);
-      setSuccess(true);
-      setTapCount(0);
-    }
-  };
 
   return (
     <footer className="border-t mt-20 bg-white text-slate-900 dark:bg-slate-950 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <button
-          onClick={handleSecretTap}
-          className="block md:hidden w-full text-[10px] text-center text-black/5 dark:text-white/5 mb-3 select-none"
-        >
-          tap 5×
-        </button>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
@@ -51,7 +30,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                  className="hover:text-primary-600 dark:hover:text-primary-300"
                 >
                   About
                 </Link>
@@ -59,7 +38,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/projects"
-                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                  className="hover:text-primary-600 dark:hover:text-primary-300"
                 >
                   Projects
                 </Link>
@@ -67,7 +46,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/experience"
-                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                  className="hover:text-primary-600 dark:hover:text-primary-300"
                 >
                   Experience
                 </Link>
@@ -75,7 +54,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                  className="hover:text-primary-600 dark:hover:text-primary-300"
                 >
                   Contact
                 </Link>
@@ -126,7 +105,7 @@ export function Footer() {
               className="opacity-80 group-hover:opacity-100 transition-opacity"
             />
             <Gamepad2 size={18} className="text-gray-500 dark:text-slate-400" />
-            <span className="text-sm font-semibold text-gray-700 dark:text-slate-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors tracking-wide">
+            <span className="text-sm font-semibold text-gray-700 dark:text-slate-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 tracking-wide">
               ↑↑↓↓←→←→BA
             </span>
           </div>
