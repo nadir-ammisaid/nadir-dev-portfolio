@@ -25,10 +25,7 @@ export function useKonamiCode() {
       const newKeys = [...keys, key].slice(-10);
       setKeys(newKeys);
 
-      const konamiString = KONAMI_CODE.join(",");
-      const keysString = newKeys.join(",");
-
-      if (keysString === konamiString) {
+      if (newKeys.join(",") === KONAMI_CODE.join(",")) {
         setSuccess(true);
         setKeys([]);
       }
