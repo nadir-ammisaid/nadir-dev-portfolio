@@ -12,7 +12,7 @@ import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
 import Image from "next/image";
 import { profile } from "../../data/profile";
 
-console.log("reCAPTCHA Key:", process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+//console.log("reCAPTCHA Key:", process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),

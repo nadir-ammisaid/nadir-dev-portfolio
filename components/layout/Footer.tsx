@@ -30,7 +30,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-primary-600 dark:hover:text-primary-300"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
                 >
                   About
                 </Link>
@@ -38,7 +38,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/projects"
-                  className="hover:text-primary-600 dark:hover:text-primary-300"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
                 >
                   Projects
                 </Link>
@@ -46,7 +46,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/experience"
-                  className="hover:text-primary-600 dark:hover:text-primary-300"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
                 >
                   Experience
                 </Link>
@@ -54,7 +54,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="hover:text-primary-600 dark:hover:text-primary-300"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
                 >
                   Contact
                 </Link>
@@ -71,7 +71,7 @@ export function Footer() {
                 href={profile.social.github}
                 target="_blank"
                 rel="noopener"
-                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300"
+                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
               >
                 GitHub
               </a>
@@ -79,13 +79,13 @@ export function Footer() {
                 href={profile.social.linkedin}
                 target="_blank"
                 rel="noopener"
-                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300"
+                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
               >
                 LinkedIn
               </a>
               <a
                 href={`mailto:${profile.email}`}
-                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300"
+                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
               >
                 Email
               </a>
