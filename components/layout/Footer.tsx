@@ -30,7 +30,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors underline decoration-transparent underline-offset-4 hover:decoration-primary-600"
                 >
                   About
                 </Link>
@@ -38,7 +38,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/projects"
-                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors underline decoration-transparent underline-offset-4 hover:decoration-primary-600"
                 >
                   Projects
                 </Link>
@@ -46,7 +46,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/experience"
-                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors underline decoration-transparent underline-offset-4 hover:decoration-primary-600"
                 >
                   Experience
                 </Link>
@@ -54,7 +54,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors underline decoration-transparent underline-offset-4 hover:decoration-primary-600"
                 >
                   Contact
                 </Link>
@@ -66,37 +66,46 @@ export function Footer() {
             <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
               Connect
             </h3>
-            <div className="flex flex-col space-y-3">
-              <a
-                href={profile.social.github}
-                target="_blank"
-                rel="noopener"
-                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
-              >
-                GitHub
-              </a>
-              <a
-                href={profile.social.linkedin}
-                target="_blank"
-                rel="noopener"
-                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
-              >
-                LinkedIn
-              </a>
-              <a
-                href={`mailto:${profile.email}`}
-                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
-              >
-                Email
-              </a>
-            </div>
+            <ul className="space-y-2 text-sm text-gray-600 dark:text-slate-300">
+              <li>
+                <a
+                  href={profile.social.github}
+                  target="_blank"
+                  rel="noopener"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors underline decoration-transparent underline-offset-4 hover:decoration-primary-600"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href={profile.social.linkedin}
+                  target="_blank"
+                  rel="noopener"
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors underline decoration-transparent underline-offset-4 hover:decoration-primary-600"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="hover:text-primary-600 dark:hover:text-primary-300 transition-colors underline decoration-transparent underline-offset-4 hover:decoration-primary-600"
+                >
+                  Email
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 dark:text-slate-400">
           <p>&copy; {currentYear} Nadir AMMI-SAID. All rights reserved.</p>
 
-          <div className="flex items-center gap-2 mt-4 md:mt-0 opacity-40 hover:opacity-100 transition-opacity cursor-pointer group">
+          <div
+            className="flex items-center gap-2 mt-4 md:mt-0 opacity-40 hover:opacity-100 transition-opacity cursor-help group"
+            title="Try the Konami Code"
+          >
             <Image
               src="/konami-logo.png"
               alt="Konami Logo"
@@ -104,7 +113,9 @@ export function Footer() {
               height={22}
               className="opacity-80 group-hover:opacity-100 transition-opacity"
             />
+
             <Gamepad2 size={18} className="text-gray-500 dark:text-slate-400" />
+
             <span className="text-sm font-semibold text-gray-700 dark:text-slate-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 tracking-wide">
               ↑↑↓↓←→←→BA
             </span>
