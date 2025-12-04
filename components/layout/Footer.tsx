@@ -1,14 +1,37 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { Gamepad2 } from "lucide-react";
 import { profile } from "../../data/profile";
 import Image from "next/image";
+import { useKonamiCode } from "../../hooks/useKonamiCode";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const { setSuccess } = useKonamiCode();
+  const [tapCount, setTapCount] = useState(0);
+
+  const handleSecretTap = () => {
+    const newCount = tapCount + 1;
+    setTapCount(newCount);
+    if (newCount >= 5) {
+      if (navigator.vibrate) navigator.vibrate(180);
+      setSuccess(true);
+      setTapCount(0);
+    }
+  };
 
   return (
     <footer className="border-t mt-20 bg-white text-slate-900 dark:bg-slate-950 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <button
+          onClick={handleSecretTap}
+          className="block md:hidden w-full text-[10px] text-center text-black/5 dark:text-white/5 mb-3 select-none"
+        >
+          tap 5×
+        </button>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="font-bold text-lg mb-4 text-gray-900 dark:text-white">
@@ -68,22 +91,22 @@ export function Footer() {
               <a
                 href={profile.social.github}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                rel="noopener"
+                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300"
               >
                 GitHub
               </a>
               <a
                 href={profile.social.linkedin}
                 target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                rel="noopener"
+                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300"
               >
                 LinkedIn
               </a>
               <a
                 href={`mailto:${profile.email}`}
-                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors"
+                className="text-sm text-gray-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300"
               >
                 Email
               </a>
@@ -94,21 +117,16 @@ export function Footer() {
         <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 dark:text-slate-400">
           <p>&copy; {currentYear} Nadir AMMI-SAID. All rights reserved.</p>
 
-          <div
-            className="flex items-center gap-2 mt-4 md:mt-0 opacity-40 hover:opacity-100 transition-opacity cursor-help group"
-            title="Try the Konami Code"
-          >
+          <div className="flex items-center gap-2 mt-4 md:mt-0 opacity-40 hover:opacity-100 transition-opacity cursor-pointer group">
             <Image
               src="/konami-logo.png"
               alt="Konami Logo"
-              width={24}
-              height={24}
-              className="opacity-70 group-hover:opacity-100 transition-opacity"
+              width={22}
+              height={22}
+              className="opacity-80 group-hover:opacity-100 transition-opacity"
             />
-
             <Gamepad2 size={18} className="text-gray-500 dark:text-slate-400" />
-
-            <span className="text-s text-black/70 dark:text-slate-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors tracking-wide">
+            <span className="text-sm font-semibold text-gray-700 dark:text-slate-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors tracking-wide">
               ↑↑↓↓←→←→BA
             </span>
           </div>

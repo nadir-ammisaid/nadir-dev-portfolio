@@ -40,5 +40,5 @@ export function useKonamiCode() {
 
   const reset = () => setSuccess(false);
 
-  return { success, reset };
+  return { success, reset, setSuccess };
 }
