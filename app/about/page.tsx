@@ -165,19 +165,26 @@ export default function AboutPage() {
                     href="/cv/nadir-ammisaid-cv.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg transition-colors font-medium shadow-lg"
+                    className="px-8 py-3 flex flex-col items-center justify-center text-center
+               border-2 border-primary-600 dark:border-primary-500
+               text-primary-600 dark:text-primary-400
+               hover:bg-primary-50 dark:hover:bg-gray-700
+               rounded-lg transition-colors font-medium shadow-md"
                   >
-                    <Eye size={20} />
                     View CV
+                    <Eye size={20} />
                   </a>
 
                   <a
                     href="/cv/nadir-ammisaid-cv.pdf"
                     download
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-lg transition-colors font-medium shadow-lg"
+                    className="px-8 py-3 flex flex-col items-center justify-center text-center
+               bg-primary-600 hover:bg-primary-700
+               dark:bg-primary-500 dark:hover:bg-primary-600
+               text-white rounded-lg transition-colors font-medium shadow-md"
                   >
-                    <Download size={20} />
                     Download CV
+                    <Download size={20} />
                   </a>
                 </div>
               </div>

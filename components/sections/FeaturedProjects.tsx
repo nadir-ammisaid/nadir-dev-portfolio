@@ -87,7 +87,10 @@ export default function FeaturedProjects() {
         <div className="text-center">
           <Link
             href="/projects"
-            className="inline-block px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium shadow-md"
+            className="px-8 py-3 inline-flex flex-col items-center justify-center text-center
+               bg-primary-600 hover:bg-primary-700
+               dark:bg-primary-500 dark:hover:bg-primary-600
+               text-white rounded-lg transition-colors font-medium shadow-md"
           >
             View All Projects
           </Link>
